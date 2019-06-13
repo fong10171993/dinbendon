@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        吃什麼
+        吃什麼 :)
       </h1>
       <h2 class="subtitle">
         集客下午茶團購
