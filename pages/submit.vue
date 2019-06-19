@@ -81,7 +81,7 @@
     </div>
     <button class="btn btn-primary" @click="createPost">送出</button>
 </div>
-<button class=add-list>＋建立新團購單</button>
+<a href="http://localhost:3000/addlist"><button class=add-list>＋建立新團購單</button></a>
 
 
 </div>
