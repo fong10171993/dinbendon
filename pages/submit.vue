@@ -16,64 +16,55 @@
     <td><input type="checkbox" value="1" name="Product_1"></td>　
     <td>脆皮雞排</td>
       <td>$65</td>
-    　<td><form id='myform' method='POST' action='#'>
-    <label for=""></label><input type='button' value='-' class='qtyminus' field='quantity' /><!--
-    --><input type='text' name='quantity' value='0' class='qty' /><!--
---><input type='button' value='+' class='qtyplus' field='quantity' />
-</form></td>
-      <td></td>
+    　<td><ol>
+      <li><input type="number" id="tea" value="0"> 項</li>
+      </ol></td>
+      <td><span id="subtotal">0</span>元</td>
       <td></td>
 　</tr>
   <tr>
     <td><input type="checkbox" value="1" name="Product_1"></td>　
     <td>無骨雞塊</td>
       <td>$65</td>
-    　<td><form id='myform' method='POST' action='#'>
-    <label for=""></label><input type='button' value='-' class='qtyminus' field='quantity' /><!--
-    --><input type='text' name='quantity' value='0' class='qty' /><!--
---><input type='button' value='+' class='qtyplus' field='quantity' />
-</form></td>
-    <td></td>
+    　<td><ol>
+      <li><input type="number" id="tea" value="0"> 項</li>
+      </ol></td>
+    <td><span id="subtotal">0</span>元</td>
     <td></td>
 </tr>
 <tr>
     <td><input type="checkbox" value="1" name="Product_1"></td>
     <td>脆皮鮮魷</td>
       <td>$65</td>
-    　<td><form id='myform' method='POST' action='#'>
-    <label for=""></label><input type='button' value='-' class='qtyminus' field='quantity' /><!--
-    --><input type='text' name='quantity' value='0' class='qty' /><!--
---><input type='button' value='+' class='qtyplus' field='quantity' />
-</form></td>
-    <td></td>
+    　<td><ol>
+      <li><input type="number" id="tea" value="0"> 項</li>
+      </ol></td>
+    <td><span id="subtotal">0</span>元</td>
     <td></td>
 </tr>
 <tr>
     <td><input type="checkbox" value="1" name="Product_1"></td>　
     <td>脆皮雞翅</td>
       <td>$25</td>
-    　<td><form id='myform' method='POST' action='#'>
-    <label for=""></label><input type='button' value='-' class='qtyminus' field='quantity' /><!--
-    --><input type='text' name='quantity' value='0' class='qty' /><!--
---><input type='button' value='+' class='qtyplus' field='quantity' />
-</form></td>
-    <td></td>
+    　<td><ol>
+      <li><input type="number" id="tea" value="0"> 項</li>
+      </ol></td>
+    <td><span id="subtotal">0</span>元</td>
     <td></td>
 </tr>
 <tr>
     <td><input type="checkbox" value="1" name="Product_1"></td>　
     <td>七里香</td>
       <td>$25</td>
-    　<td><form id='myform' method='POST' action='#'>
-    <label for=""></label><input type='button' value='-' class='qtyminus' field='quantity' /><!--
-    --><input type='text' name='quantity' value='0' class='qty' /><!--
---><input type='button' value='+' class='qtyplus' field='quantity' />
-</form></td>
-    <td></td>
+    　<td><ol>
+      <li><input type="number" id="tea" value="0"> 項</li>
+      </ol></td>
+    <td><span id="subtotal">0</span>元</td>
     <td></td>
 </tr>
 </table>
 <button class=add-items>新增品項</button>
+<button class=add-items>確認</button>
     <div class="form-group">
     <label for="formGroupExampleInput2">有什麼特殊需求？跟我說</label><br>
     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="例如:雞排加辣不要切">
