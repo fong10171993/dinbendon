@@ -4,25 +4,25 @@
 <div class="submit">
   <div class="food-form">
     <table width="500" border="1">
-　<tr>
-    <td>+1選購</td>
-    <td>品項</td>
-    <td>單價</td>
-    <td>數量</td>
-    <td>總價</td>
-    <td>訂單量</td>
-　</tr>
-  <tr>
-    <td><input type="checkbox" value="1" name="Product_1"></td>　
-    <td>脆皮雞排</td>
-      <td>$65</td>
-    　<td><ol>
-      <li><input type="number" id="tea" value="0"> 項</li>
-      </ol></td>
-      <td><span id="subtotal">0</span>元</td>
-      <td></td>
-　</tr>
-  <tr>
+    　<tr>
+        <td>+1選購</td>
+        <td>品項</td>
+        <td>單價</td>
+        <td>數量</td>
+        <td>總價</td>
+        <td>訂單量</td>
+        <td>備註</td>
+    　</tr>
+      <tr v-for="product in products" :key="product.id">
+        <td><input type="checkbox" value="1" name="Product_1"></td>　
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+      　<td><input type="number" id="tea" value="0" :v-model="product.amount"> 項</td>
+        <td><span id="subtotal">{{ product.amount * product.price }}</span>元</td>
+        <td><input type="text" v-model="product.note"></td>
+        <td></td>
+    　</tr>
+  <!-- <tr>
     <td><input type="checkbox" value="1" name="Product_1"></td>　
     <td>無骨雞塊</td>
       <td>$65</td>
@@ -60,8 +60,8 @@
       <li><input type="number" id="tea" value="0"> 項</li>
       </ol></td>
     <td><span id="subtotal">0</span>元</td>
-    <td></td>
-</tr>
+    <td></td> 
+</tr>-->
 </table>
 <button class=add-items>新增品項</button>
 <button class=add-items>確認</button>
@@ -70,13 +70,34 @@
     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="例如:雞排加辣不要切">
     </div>
     </div>
-    <button class="btn btn-primary" @click="createPost">送出</button>
+    <button class="btn btn-primary">送出</button>
 </div>
-<a href="http://localhost:3000/addlist"><button class=add-list>＋建立新團購單</button></a>
-
+<!-- <a href="http://localhost:3000/addlist"><button class=add-list>＋建立新團購單</button></a> -->
+  <nuxt-link to="/addList" >
+    <button  class="add-list">
+      ＋建立新團購單
+    </button>
+  </nuxt-link>
 
 </div>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      products: []
+    }
+  },
+  async created() {
+    const order_id = this.$route.query.order_id
+    const { data } = await this.$axios.get(`http://localhost:8000/api/orders/${order_id}`)
+    this.products = data.data.products
+  }
+}
+</script>
+
 
 <style>
 .add-list{
